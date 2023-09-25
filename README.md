@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Frontend de la aplicación ecommer
+
+La aplicación ecommer es un Backend en NestJs que alimenta a este Frontend, y la dirección donde reposa ese repocitorio del Backend es la siguiente [Link](https://github.com/PalantirDagor/ecommer)
