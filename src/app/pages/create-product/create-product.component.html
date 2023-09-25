@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">Crear Nuevo Producto</h1>
+        <form (submit)="onSubmitProduct()">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" [(ngModel)]="producto.nombre" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio" [(ngModel)]="producto.precio" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="detalle">Dellate</label>
+            <input type="text" name="detalle" id="detalle" [(ngModel)]="producto.detalle"  class="form-control">
+          </div>
+          <div class="form-group">
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.categoria">
+              <option selected>Categorias</option>
+              <option [value]="category" *ngFor="let category of categoryList">{{category.nombre}}</option>
+            </select>
+            <!-- <label for="password">Categoria</label>
+            <input type="password" name="password" id="password"  class="form-control"> -->
+          </div>
+          <div class="form-group">
+            <label for="imagen">URL de la Imagen</label>
+            <input type="text" name="imagen" id="imagen" [(ngModel)]="producto.nombreImagen" class="form-control">
+          </div>
+          <input type="submit" value="CREAR" class="btn btn-success btn-block btn-lg">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
