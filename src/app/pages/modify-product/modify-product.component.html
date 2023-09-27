@@ -1,1 +1,26 @@
-<p>modify-product works!</p>
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">Modificar Producto</h1>
+        <form (submit)="onSubmitProduct(producto)">
+          <div class="form-group">
+            <label for="nombre">Nombre: {{producto.nombre}}</label>
+          </div>
+          <div class="form-group">
+            <label for="precio">Precio: {{producto.precio}}</label>
+            <input type="number" name="precio" id="precio" [(ngModel)]="producto.precio" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="detalle">Dellate: {{producto.detalle}}</label>
+            <input type="text" name="detalle" id="detalle" [(ngModel)]="producto.detalle"  class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="nombre">Categoria: {{producto.nombreCategoria}}</label>
+          </div>
+          <input type="submit" value="Modificar" class="btn btn-primary btn-block btn-lg">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

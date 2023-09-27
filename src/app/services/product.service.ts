@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
@@ -7,6 +7,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class ProductService {
 
+  @Output() sendProduct: EventEmitter<any> = new EventEmitter();
   public cartAddedSubject = new Subject<boolean>();
   arrayObj: any[] = [];
 
@@ -14,7 +15,7 @@ export class ProductService {
 
   getAllProducts(): Observable<any[]> {
     debugger
-    return this.http.get<any[]>(`http://localhost:3000/productos`)
+    return this.http.get<any[]>(`http://localhost:3000/productos`);
   }
 
   addToCart(obj: any) : Observable<any> {
@@ -60,6 +61,17 @@ export class ProductService {
   }
 
   postCreateProduct(product: any): Observable<any> {
-    return this.http.post<any>(`http://localhost:3000/productos`, product);
+    debugger
+    return this.http.post<any>(`http://localhost:3000/productos`, product) ;
+  }
+
+  patchModifyProduct(product: any): Observable<any> {
+    debugger
+    return this.http.patch<any>(`http://localhost:3000/productos`, product)
+  }
+
+  getFilterProducts(category: string): Observable<any[]>{
+    debugger
+    return this.http.get<any>(`http://localhost:3000/productos/` + category);
   }
 }

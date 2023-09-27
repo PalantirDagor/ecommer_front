@@ -15,7 +15,7 @@ export class CreateProductComponent {
     nombre: '',
     precio: 0,
     detalle: '',
-    categoria: null,
+    categoria: '',
     nombreImagen: ''
   }
 
@@ -35,6 +35,10 @@ export class CreateProductComponent {
     this.categotyService.getAllCategories().subscribe((result: any) => {
       this.categoryList = result;
     })
+  }
+
+  changeCategoria(e: any) {
+    this.producto.categoria = e.target.value;
   }
 
   onSubmitProduct() {

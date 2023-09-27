@@ -17,9 +17,9 @@
             <input type="text" name="detalle" id="detalle" [(ngModel)]="producto.detalle"  class="form-control">
           </div>
           <div class="form-group">
-            <select class="form-select" aria-label="Default select example" [(ngModel)]="producto.categoria">
+            <select class="form-select" aria-label="Default select example" (change)="changeCategoria($event)">
               <option selected>Categorias</option>
-              <option [value]="category" *ngFor="let category of categoryList">{{category.nombre}}</option>
+              <option [value]="category.nombre" *ngFor="let category of categoryList">{{category.nombre}}</option>
             </select>
             <!-- <label for="password">Categoria</label>
             <input type="password" name="password" id="password"  class="form-control"> -->

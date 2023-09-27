@@ -41,4 +41,8 @@ export class DeleteProductComponent implements OnInit {
   navigateCreateProduct() {
     this.router.navigate(['/crear-producto']);
   }
+
+  sendModifyProduct({nombre, precio, detalle, nombreCategoria, nombreImagen}: any) {
+    this.router.navigate(['/modificar-producto', nombre, precio, detalle, nombreCategoria, nombreImagen]);
+  }
 }

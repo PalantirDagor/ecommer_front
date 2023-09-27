@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">Modificar Producto</h1>
+        <form (submit)="onSubmitCategory(categoria)">
+          <div class="form-group">
+            <label for="nombre">Nombre: {{categoria.nombre}}</label>
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Dellate: {{categoria.descripcion}}</label>
+            <input type="text" name="descripcion" id="descripcion" [(ngModel)]="categoria.descripcion"  class="form-control">
+          </div>
+          <input type="submit" value="Modificar" class="btn btn-primary btn-block btn-lg">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

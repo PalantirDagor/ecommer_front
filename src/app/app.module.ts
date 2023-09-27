@@ -15,6 +15,9 @@ import { PanelComponent } from './pages/panel/panel.component';
 import { DeleteProductComponent } from './pages/delete-product/delete-product.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { ModifyProductComponent } from './pages/modify-product/modify-product.component';
+import { DeleteCategoryComponent } from './pages/delete-category/delete-category.component';
+import { CreateCategoryComponent } from './pages/create-category/create-category.component';
+import { ModifyCategoryComponent } from './pages/modify-category/modify-category.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ModifyProductComponent } from './pages/modify-product/modify-product.co
     PanelComponent,
     DeleteProductComponent,
     CreateProductComponent,
-    ModifyProductComponent
+    ModifyProductComponent,
+    DeleteCategoryComponent,
+    CreateCategoryComponent,
+    ModifyCategoryComponent
   ],
   imports: [
     BrowserModule,
